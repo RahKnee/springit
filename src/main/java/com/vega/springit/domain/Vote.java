@@ -1,11 +1,15 @@
-package com.vega.springit.model;
+package com.vega.springit.domain;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Vote {
     @Id
     @GeneratedValue
@@ -15,31 +19,5 @@ public class Vote {
     //user
     //link
 
-
-    public Vote() {}
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getVote() {
-        return vote;
-    }
-
-    public void setVote(int vote) {
-        this.vote = vote;
-    }
-
-    @Override
-    public String toString() {
-        return "Vote{" +
-                "id=" + id +
-                ", vote=" + vote +
-                '}';
-    }
 
 }
