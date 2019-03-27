@@ -32,7 +32,7 @@ public class LinkController {
 
     @GetMapping("/{id}")
     public Optional<Link> read(@PathVariable Long id) {
-        return linkRepository.findById();
+        return linkRepository.findById(id);
     }
 
     @PutMapping("/{id}")
